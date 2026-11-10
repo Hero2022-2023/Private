@@ -1,0 +1,1847 @@
+mixed-port: 7890
+allow-lan: true
+bind-address: 0.0.0.0
+mode: rule
+log-level: info
+external-controller: 0.0.0.0:9090
+external-ui: ui
+secret: '123456'
+ipv6: false
+tun:
+  enable: false
+  stack: system
+  dns-hijack:
+    - any:53
+dns:
+  enable: true
+  listen: 0.0.0.0:1053
+  ipv6: false
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+  fallback:
+    - https://1.0.0.1/dns-query
+    - tls://dns.google
+  fallback-filter:
+    geoip: true
+    geoip-code: CN
+    ipcidr:
+      - 240.0.0.0/4
+      - 0.0.0.0/32
+proxies:
+  - name: DeVPN-KR-0
+    type: vmess
+    server: u1SB8Z3w5eNIlNN5.v.3dns.vip
+    port: 443
+    uuid: be5c34cc0de5479fa208fdb0495b6ff3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: u1SB8Z3w5eNIlNN5.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: u1SB8Z3w5eNIlNN5.v.3dns.vip
+  - name: DeVPN-KR-1
+    type: vmess
+    server: HgNHmGzDe0vXsvvc.v.3dns.vip
+    port: 443
+    uuid: be5c34cc0de5479fa208fdb0495b6ff3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: HgNHmGzDe0vXsvvc.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: HgNHmGzDe0vXsvvc.v.3dns.vip
+  - name: DeVPN-KR-2
+    type: vmess
+    server: JjPRrCg5kOkpkwpa.v.3dns.vip
+    port: 443
+    uuid: be5c34cc0de5479fa208fdb0495b6ff3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: JjPRrCg5kOkpkwpa.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: JjPRrCg5kOkpkwpa.v.3dns.vip
+  - name: DeVPN-KR-3
+    type: vmess
+    server: WIDkzavxwwjiXsNk.v.3dns.vip
+    port: 443
+    uuid: be5c34cc0de5479fa208fdb0495b6ff3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: WIDkzavxwwjiXsNk.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: WIDkzavxwwjiXsNk.v.3dns.vip
+  - name: DeVPN-KR-4
+    type: vmess
+    server: 8HIvDV2XUR0SXVsI.v.3dns.vip
+    port: 443
+    uuid: be5c34cc0de5479fa208fdb0495b6ff3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: 8HIvDV2XUR0SXVsI.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: 8HIvDV2XUR0SXVsI.v.3dns.vip
+  - name: DeVPN-KR-5
+    type: vmess
+    server: B1vL20htOxCqu0nR.v.3dns.vip
+    port: 443
+    uuid: be5c34cc0de5479fa208fdb0495b6ff3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: B1vL20htOxCqu0nR.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: B1vL20htOxCqu0nR.v.3dns.vip
+  - name: DeVPN-KR-6
+    type: vmess
+    server: mTkoAujSah7f4iYu.v.3dns.vip
+    port: 443
+    uuid: be5c34cc0de5479fa208fdb0495b6ff3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: mTkoAujSah7f4iYu.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: mTkoAujSah7f4iYu.v.3dns.vip
+  - name: DeVPN-KR-7
+    type: vmess
+    server: 5Tp4XIeszi3xZ1HM.v.3dns.vip
+    port: 443
+    uuid: be5c34cc0de5479fa208fdb0495b6ff3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: 5Tp4XIeszi3xZ1HM.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: 5Tp4XIeszi3xZ1HM.v.3dns.vip
+  - name: DeVPN-SG-0
+    type: vmess
+    server: 68wOFuc9pDiVhojk.v.3dns.vip
+    port: 443
+    uuid: be5c34cc0de5479fa208fdb0495b6ff3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: 68wOFuc9pDiVhojk.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: 68wOFuc9pDiVhojk.v.3dns.vip
+  - name: DeVPN-SG-1
+    type: vmess
+    server: tlfjac0xBHrmUQbu.v.3dns.vip
+    port: 443
+    uuid: be5c34cc0de5479fa208fdb0495b6ff3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: tlfjac0xBHrmUQbu.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: tlfjac0xBHrmUQbu.v.3dns.vip
+  - name: DeVPN-SG-2
+    type: vmess
+    server: fOSo6mnwqMGuHNDP.v.3dns.vip
+    port: 443
+    uuid: be5c34cc0de5479fa208fdb0495b6ff3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: fOSo6mnwqMGuHNDP.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: fOSo6mnwqMGuHNDP.v.3dns.vip
+  - name: DeVPN-SG-3
+    type: vmess
+    server: 7IOOTLQojK4kakPw.v.3dns.vip
+    port: 443
+    uuid: be5c34cc0de5479fa208fdb0495b6ff3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: 7IOOTLQojK4kakPw.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: 7IOOTLQojK4kakPw.v.3dns.vip
+  - name: DeVPN-SG-4
+    type: vmess
+    server: SHOz0uS9JTCD8Xpg.v.3dns.vip
+    port: 443
+    uuid: be5c34cc0de5479fa208fdb0495b6ff3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: SHOz0uS9JTCD8Xpg.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: SHOz0uS9JTCD8Xpg.v.3dns.vip
+  - name: DeVPN-SG-5
+    type: vmess
+    server: SulYWe5AWmc1ZuKX.v.3dns.vip
+    port: 443
+    uuid: be5c34cc0de5479fa208fdb0495b6ff3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: SulYWe5AWmc1ZuKX.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: SulYWe5AWmc1ZuKX.v.3dns.vip
+  - name: DeVPN-SG-6
+    type: vmess
+    server: EznmZWfbLaAQTB1Z.v.3dns.vip
+    port: 443
+    uuid: be5c34cc0de5479fa208fdb0495b6ff3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: EznmZWfbLaAQTB1Z.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: EznmZWfbLaAQTB1Z.v.3dns.vip
+  - name: DeVPN-SG-7
+    type: vmess
+    server: N0qEYfJKkZplH81r.v.3dns.vip
+    port: 443
+    uuid: be5c34cc0de5479fa208fdb0495b6ff3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: N0qEYfJKkZplH81r.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: N0qEYfJKkZplH81r.v.3dns.vip
+  - name: DeVPN-SG-8
+    type: vmess
+    server: XRjNSz7fIM82jj91.v.3dns.vip
+    port: 443
+    uuid: be5c34cc0de5479fa208fdb0495b6ff3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: XRjNSz7fIM82jj91.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: XRjNSz7fIM82jj91.v.3dns.vip
+  - name: DeVPN-SG-9
+    type: vmess
+    server: b7xYhpu6jNZhpaEK.v.3dns.vip
+    port: 443
+    uuid: be5c34cc0de5479fa208fdb0495b6ff3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: b7xYhpu6jNZhpaEK.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: b7xYhpu6jNZhpaEK.v.3dns.vip
+  - name: DeVPN-JP-0
+    type: vmess
+    server: uhuiSJnjcgDeV2Y5.v.3dns.vip
+    port: 443
+    uuid: be5c34cc0de5479fa208fdb0495b6ff3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: uhuiSJnjcgDeV2Y5.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: uhuiSJnjcgDeV2Y5.v.3dns.vip
+  - name: DeVPN-JP-1
+    type: vmess
+    server: z5Bv8cD4wJKN6vOh.v.3dns.vip
+    port: 443
+    uuid: be5c34cc0de5479fa208fdb0495b6ff3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: z5Bv8cD4wJKN6vOh.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: z5Bv8cD4wJKN6vOh.v.3dns.vip
+  - name: DeVPN-JP-2
+    type: vmess
+    server: ZxOgUrVycahqygr6.v.3dns.vip
+    port: 443
+    uuid: be5c34cc0de5479fa208fdb0495b6ff3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: ZxOgUrVycahqygr6.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: ZxOgUrVycahqygr6.v.3dns.vip
+  - name: DeVPN-JP-3
+    type: vmess
+    server: u8Qatdq31xBc2kfR.v.3dns.vip
+    port: 443
+    uuid: be5c34cc0de5479fa208fdb0495b6ff3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: u8Qatdq31xBc2kfR.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: u8Qatdq31xBc2kfR.v.3dns.vip
+  - name: DeVPN-JP-4
+    type: vmess
+    server: ktJyZg5H7hOm9sza.v.3dns.vip
+    port: 443
+    uuid: be5c34cc0de5479fa208fdb0495b6ff3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: ktJyZg5H7hOm9sza.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: ktJyZg5H7hOm9sza.v.3dns.vip
+  - name: DeVPN-JP-5
+    type: vmess
+    server: S2v2PuIgeXA8k3UR.v.3dns.vip
+    port: 443
+    uuid: be5c34cc0de5479fa208fdb0495b6ff3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: S2v2PuIgeXA8k3UR.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: S2v2PuIgeXA8k3UR.v.3dns.vip
+  - name: DeVPN-JP-6
+    type: vmess
+    server: Gl5h7bi5WwX00fDE.v.3dns.vip
+    port: 443
+    uuid: be5c34cc0de5479fa208fdb0495b6ff3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: Gl5h7bi5WwX00fDE.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: Gl5h7bi5WwX00fDE.v.3dns.vip
+  - name: DeVPN-JP-7
+    type: vmess
+    server: BEAgBNOLQkVt99J2.v.3dns.vip
+    port: 443
+    uuid: be5c34cc0de5479fa208fdb0495b6ff3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: BEAgBNOLQkVt99J2.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: BEAgBNOLQkVt99J2.v.3dns.vip
+  - name: DeVPN-JP-8
+    type: vmess
+    server: srrsTN3G0FnD6M8d.v.3dns.vip
+    port: 443
+    uuid: be5c34cc0de5479fa208fdb0495b6ff3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: srrsTN3G0FnD6M8d.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: srrsTN3G0FnD6M8d.v.3dns.vip
+  - name: DeVPN-JP-9
+    type: vmess
+    server: kneNaKHeSXnZH259.v.3dns.vip
+    port: 443
+    uuid: be5c34cc0de5479fa208fdb0495b6ff3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: kneNaKHeSXnZH259.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: kneNaKHeSXnZH259.v.3dns.vip
+  - name: DeVPN-DE-0
+    type: vmess
+    server: wqRvxhT0JzI1Bx3n.v.3dns.vip
+    port: 443
+    uuid: be5c34cc0de5479fa208fdb0495b6ff3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: wqRvxhT0JzI1Bx3n.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: wqRvxhT0JzI1Bx3n.v.3dns.vip
+  - name: DeVPN-DE-1
+    type: vmess
+    server: gSLmTfzWnbe5UYnC.v.3dns.vip
+    port: 443
+    uuid: be5c34cc0de5479fa208fdb0495b6ff3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: gSLmTfzWnbe5UYnC.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: gSLmTfzWnbe5UYnC.v.3dns.vip
+  - name: DeVPN-DE-2
+    type: vmess
+    server: lKFF2s0R9qZk1ZU8.v.3dns.vip
+    port: 443
+    uuid: be5c34cc0de5479fa208fdb0495b6ff3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: lKFF2s0R9qZk1ZU8.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: lKFF2s0R9qZk1ZU8.v.3dns.vip
+  - name: DeVPN-DE-3
+    type: vmess
+    server: v6ShfXPGaNOrDwSy.v.3dns.vip
+    port: 443
+    uuid: be5c34cc0de5479fa208fdb0495b6ff3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: v6ShfXPGaNOrDwSy.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: v6ShfXPGaNOrDwSy.v.3dns.vip
+  - name: DeVPN-DE-4
+    type: vmess
+    server: wqHbVOk8YR9ZAfBY.v.3dns.vip
+    port: 443
+    uuid: be5c34cc0de5479fa208fdb0495b6ff3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: wqHbVOk8YR9ZAfBY.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: wqHbVOk8YR9ZAfBY.v.3dns.vip
+  - name: DeVPN-DE-5
+    type: vmess
+    server: KioltSO6ytDGm0Ja.v.3dns.vip
+    port: 443
+    uuid: be5c34cc0de5479fa208fdb0495b6ff3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: KioltSO6ytDGm0Ja.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: KioltSO6ytDGm0Ja.v.3dns.vip
+  - name: DeVPN-DE-6
+    type: vmess
+    server: poeiLD4YbYshwTWI.v.3dns.vip
+    port: 443
+    uuid: be5c34cc0de5479fa208fdb0495b6ff3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: poeiLD4YbYshwTWI.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: poeiLD4YbYshwTWI.v.3dns.vip
+  - name: DeVPN-DE-7
+    type: vmess
+    server: 9WEXvuEOsTlJWUrS.v.3dns.vip
+    port: 443
+    uuid: be5c34cc0de5479fa208fdb0495b6ff3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: 9WEXvuEOsTlJWUrS.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: 9WEXvuEOsTlJWUrS.v.3dns.vip
+  - name: DeVPN-DE-8
+    type: vmess
+    server: HycksF7NxbdnDY7s.v.3dns.vip
+    port: 443
+    uuid: be5c34cc0de5479fa208fdb0495b6ff3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: HycksF7NxbdnDY7s.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: HycksF7NxbdnDY7s.v.3dns.vip
+  - name: DeVPN-DE-9
+    type: vmess
+    server: KZ1GTjwdsvgbnk4Q.v.3dns.vip
+    port: 443
+    uuid: be5c34cc0de5479fa208fdb0495b6ff3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: KZ1GTjwdsvgbnk4Q.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: KZ1GTjwdsvgbnk4Q.v.3dns.vip
+  - name: DeVPN-HK-0
+    type: vmess
+    server: Vq4yKT0LTlq02c04.v.3dns.vip
+    port: 443
+    uuid: be5c34cc0de5479fa208fdb0495b6ff3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: Vq4yKT0LTlq02c04.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: Vq4yKT0LTlq02c04.v.3dns.vip
+  - name: DeVPN-HK-1
+    type: vmess
+    server: kBONDXW9liFCi4h4.v.3dns.vip
+    port: 443
+    uuid: be5c34cc0de5479fa208fdb0495b6ff3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: kBONDXW9liFCi4h4.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: kBONDXW9liFCi4h4.v.3dns.vip
+  - name: DeVPN-HK-2
+    type: vmess
+    server: 3t5FLdItzBRAFO89.v.3dns.vip
+    port: 443
+    uuid: be5c34cc0de5479fa208fdb0495b6ff3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: 3t5FLdItzBRAFO89.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: 3t5FLdItzBRAFO89.v.3dns.vip
+  - name: DeVPN-HK-3
+    type: vmess
+    server: Tdh2Aglh0Qv7PTvr.v.3dns.vip
+    port: 443
+    uuid: be5c34cc0de5479fa208fdb0495b6ff3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: Tdh2Aglh0Qv7PTvr.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: Tdh2Aglh0Qv7PTvr.v.3dns.vip
+  - name: DeVPN-HK-4
+    type: vmess
+    server: oNYIqBA7b6genyEs.v.3dns.vip
+    port: 443
+    uuid: be5c34cc0de5479fa208fdb0495b6ff3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: oNYIqBA7b6genyEs.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: oNYIqBA7b6genyEs.v.3dns.vip
+  - name: DeVPN-HK-5
+    type: vmess
+    server: 6DbdyOz2ORgrijGr.v.3dns.vip
+    port: 443
+    uuid: be5c34cc0de5479fa208fdb0495b6ff3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: 6DbdyOz2ORgrijGr.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: 6DbdyOz2ORgrijGr.v.3dns.vip
+  - name: DeVPN-HK-6
+    type: vmess
+    server: 84ELp2EwjqihxJgO.v.3dns.vip
+    port: 443
+    uuid: be5c34cc0de5479fa208fdb0495b6ff3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: 84ELp2EwjqihxJgO.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: 84ELp2EwjqihxJgO.v.3dns.vip
+  - name: DeVPN-HK-7
+    type: vmess
+    server: OXNM3w05DVWkM4VI.v.3dns.vip
+    port: 443
+    uuid: be5c34cc0de5479fa208fdb0495b6ff3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: OXNM3w05DVWkM4VI.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: OXNM3w05DVWkM4VI.v.3dns.vip
+  - name: DeVPN-HK-8
+    type: vmess
+    server: 7QS97Y9n5TO4KDFh.v.3dns.vip
+    port: 443
+    uuid: be5c34cc0de5479fa208fdb0495b6ff3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: 7QS97Y9n5TO4KDFh.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: 7QS97Y9n5TO4KDFh.v.3dns.vip
+  - name: DeVPN-HK-9
+    type: vmess
+    server: UkJsktB2yNxxzxUZ.v.3dns.vip
+    port: 443
+    uuid: be5c34cc0de5479fa208fdb0495b6ff3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: UkJsktB2yNxxzxUZ.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: UkJsktB2yNxxzxUZ.v.3dns.vip
+  - name: DeVPN-US-0
+    type: vmess
+    server: pLEgpj1XPDFg5KUb.v.3dns.vip
+    port: 443
+    uuid: be5c34cc0de5479fa208fdb0495b6ff3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: pLEgpj1XPDFg5KUb.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: pLEgpj1XPDFg5KUb.v.3dns.vip
+  - name: DeVPN-US-1
+    type: vmess
+    server: K80QXs42Ngs4IQxI.v.3dns.vip
+    port: 443
+    uuid: be5c34cc0de5479fa208fdb0495b6ff3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: K80QXs42Ngs4IQxI.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: K80QXs42Ngs4IQxI.v.3dns.vip
+  - name: DeVPN-US-2
+    type: vmess
+    server: OL7UwZbDPbXV7JCH.v.3dns.vip
+    port: 443
+    uuid: be5c34cc0de5479fa208fdb0495b6ff3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: OL7UwZbDPbXV7JCH.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: OL7UwZbDPbXV7JCH.v.3dns.vip
+  - name: DeVPN-US-3
+    type: vmess
+    server: wGqrF6v6wtklPYTQ.v.3dns.vip
+    port: 443
+    uuid: be5c34cc0de5479fa208fdb0495b6ff3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: wGqrF6v6wtklPYTQ.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: wGqrF6v6wtklPYTQ.v.3dns.vip
+  - name: DeVPN-US-4
+    type: vmess
+    server: 8jfzizi7vcnWy5Tx.v.3dns.vip
+    port: 443
+    uuid: be5c34cc0de5479fa208fdb0495b6ff3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: 8jfzizi7vcnWy5Tx.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: 8jfzizi7vcnWy5Tx.v.3dns.vip
+  - name: DeVPN-US-5
+    type: vmess
+    server: rjJL0pGfvx4qiYuq.v.3dns.vip
+    port: 443
+    uuid: be5c34cc0de5479fa208fdb0495b6ff3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: rjJL0pGfvx4qiYuq.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: rjJL0pGfvx4qiYuq.v.3dns.vip
+  - name: DeVPN-US-6
+    type: vmess
+    server: SGZapY57ylDIB0Hr.v.3dns.vip
+    port: 443
+    uuid: be5c34cc0de5479fa208fdb0495b6ff3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: SGZapY57ylDIB0Hr.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: SGZapY57ylDIB0Hr.v.3dns.vip
+  - name: DeVPN-US-7
+    type: vmess
+    server: YxbTSmUC2MSgY9l7.v.3dns.vip
+    port: 443
+    uuid: be5c34cc0de5479fa208fdb0495b6ff3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: YxbTSmUC2MSgY9l7.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: YxbTSmUC2MSgY9l7.v.3dns.vip
+  - name: DeVPN-US-8
+    type: vmess
+    server: 6yroMvvgdymD2u56.v.3dns.vip
+    port: 443
+    uuid: be5c34cc0de5479fa208fdb0495b6ff3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: 6yroMvvgdymD2u56.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: 6yroMvvgdymD2u56.v.3dns.vip
+  - name: DeVPN-ID-0
+    type: vmess
+    server: kf6a8eX9m7pB2hJd.v.3dns.vip
+    port: 443
+    uuid: be5c34cc0de5479fa208fdb0495b6ff3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: kf6a8eX9m7pB2hJd.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: kf6a8eX9m7pB2hJd.v.3dns.vip
+  - name: DeVPN-ID-1
+    type: vmess
+    server: pT7GlycxrF9bp33N.v.3dns.vip
+    port: 443
+    uuid: be5c34cc0de5479fa208fdb0495b6ff3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: pT7GlycxrF9bp33N.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: pT7GlycxrF9bp33N.v.3dns.vip
+  - name: DeVPN-ID-2
+    type: vmess
+    server: 0v1GKXhZgdeh5vLa.v.3dns.vip
+    port: 443
+    uuid: be5c34cc0de5479fa208fdb0495b6ff3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: 0v1GKXhZgdeh5vLa.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: 0v1GKXhZgdeh5vLa.v.3dns.vip
+  - name: DeVPN-ID-3
+    type: vmess
+    server: XWVmBKcqqw03lWcb.v.3dns.vip
+    port: 443
+    uuid: be5c34cc0de5479fa208fdb0495b6ff3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: XWVmBKcqqw03lWcb.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: XWVmBKcqqw03lWcb.v.3dns.vip
+  - name: DeVPN-ID-4
+    type: vmess
+    server: eXJevdhKx6xpvahh.v.3dns.vip
+    port: 443
+    uuid: be5c34cc0de5479fa208fdb0495b6ff3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: eXJevdhKx6xpvahh.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: eXJevdhKx6xpvahh.v.3dns.vip
+  - name: DeVPN-ID-5
+    type: vmess
+    server: gOUVJ0zI487BAzaI.v.3dns.vip
+    port: 443
+    uuid: be5c34cc0de5479fa208fdb0495b6ff3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: gOUVJ0zI487BAzaI.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: gOUVJ0zI487BAzaI.v.3dns.vip
+  - name: DeVPN-ID-6
+    type: vmess
+    server: U5z8Y4EKq520EyN9.v.3dns.vip
+    port: 443
+    uuid: be5c34cc0de5479fa208fdb0495b6ff3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: U5z8Y4EKq520EyN9.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: U5z8Y4EKq520EyN9.v.3dns.vip
+  - name: DeVPN-ID-7
+    type: vmess
+    server: CKgfeseOR8hY5KsI.v.3dns.vip
+    port: 443
+    uuid: be5c34cc0de5479fa208fdb0495b6ff3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: CKgfeseOR8hY5KsI.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: CKgfeseOR8hY5KsI.v.3dns.vip
+  - name: DeVPN-ID-8
+    type: vmess
+    server: crZXnWvG6c05bLgD.v.3dns.vip
+    port: 443
+    uuid: be5c34cc0de5479fa208fdb0495b6ff3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: crZXnWvG6c05bLgD.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: crZXnWvG6c05bLgD.v.3dns.vip
+  - name: ____香港直连-01
+    type: vless
+    server: 45.8.186.220
+    port: 9443
+    uuid: 2166091e-1c3b-4282-b3ff-9681de32d00f
+    flow: ''
+    tls: true
+    skip-cert-verify: false
+    servername: github.githubassets.com
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: W8unRvgA3ykH9S1mx1eDha9hY0PaLiK2ZltXSHP-i2g
+      short-id: 095c83aa715b9c25
+  - name: ____香港直连-02
+    type: vless
+    server: 45.8.186.220
+    port: 9443
+    uuid: 2166091e-1c3b-4282-b3ff-9681de32d00f
+    flow: ''
+    tls: true
+    skip-cert-verify: false
+    servername: github.githubassets.com
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: W8unRvgA3ykH9S1mx1eDha9hY0PaLiK2ZltXSHP-i2g
+      short-id: 095c83aa715b9c25
+  - name: ____香港直连-03
+    type: vless
+    server: 45.8.186.220
+    port: 9443
+    uuid: 2166091e-1c3b-4282-b3ff-9681de32d00f
+    flow: ''
+    tls: true
+    skip-cert-verify: false
+    servername: github.githubassets.com
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: W8unRvgA3ykH9S1mx1eDha9hY0PaLiK2ZltXSHP-i2g
+      short-id: 095c83aa715b9c25
+  - name: ____香港三网-01
+    type: vless
+    server: 188.116.22.175
+    port: 9443
+    uuid: 2166091e-1c3b-4282-b3ff-9681de32d00f
+    flow: ''
+    tls: true
+    skip-cert-verify: false
+    servername: github.githubassets.com
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: W8unRvgA3ykH9S1mx1eDha9hY0PaLiK2ZltXSHP-i2g
+      short-id: 095c83aa715b9c25
+  - name: ____香港三网-02
+    type: vless
+    server: 188.116.22.175
+    port: 9443
+    uuid: 2166091e-1c3b-4282-b3ff-9681de32d00f
+    flow: ''
+    tls: true
+    skip-cert-verify: false
+    servername: github.githubassets.com
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: W8unRvgA3ykH9S1mx1eDha9hY0PaLiK2ZltXSHP-i2g
+      short-id: 095c83aa715b9c25
+  - name: ____香港三网-03
+    type: vless
+    server: 188.116.22.175
+    port: 9443
+    uuid: 2166091e-1c3b-4282-b3ff-9681de32d00f
+    flow: ''
+    tls: true
+    skip-cert-verify: false
+    servername: github.githubassets.com
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: W8unRvgA3ykH9S1mx1eDha9hY0PaLiK2ZltXSHP-i2g
+      short-id: 095c83aa715b9c25
+  - name: ____台湾专线-01
+    type: vless
+    server: 83.147.15.12
+    port: 9443
+    uuid: 2166091e-1c3b-4282-b3ff-9681de32d00f
+    flow: ''
+    tls: true
+    skip-cert-verify: false
+    servername: github.githubassets.com
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: W8unRvgA3ykH9S1mx1eDha9hY0PaLiK2ZltXSHP-i2g
+      short-id: 095c83aa715b9c25
+  - name: ____台湾专线-02
+    type: vless
+    server: 83.147.15.12
+    port: 9443
+    uuid: 2166091e-1c3b-4282-b3ff-9681de32d00f
+    flow: ''
+    tls: true
+    skip-cert-verify: false
+    servername: github.githubassets.com
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: W8unRvgA3ykH9S1mx1eDha9hY0PaLiK2ZltXSHP-i2g
+      short-id: 095c83aa715b9c25
+  - name: ____台湾专线-03
+    type: vless
+    server: 83.147.15.12
+    port: 9443
+    uuid: 2166091e-1c3b-4282-b3ff-9681de32d00f
+    flow: ''
+    tls: true
+    skip-cert-verify: false
+    servername: github.githubassets.com
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: W8unRvgA3ykH9S1mx1eDha9hY0PaLiK2ZltXSHP-i2g
+      short-id: 095c83aa715b9c25
+  - name: ____美国专线-01
+    type: vless
+    server: 156.229.166.34
+    port: 9443
+    uuid: 2166091e-1c3b-4282-b3ff-9681de32d00f
+    flow: ''
+    tls: true
+    skip-cert-verify: false
+    servername: github.githubassets.com
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: W8unRvgA3ykH9S1mx1eDha9hY0PaLiK2ZltXSHP-i2g
+      short-id: 095c83aa715b9c25
+  - name: ____美国专线-02
+    type: vless
+    server: 156.229.166.34
+    port: 9443
+    uuid: 2166091e-1c3b-4282-b3ff-9681de32d00f
+    flow: ''
+    tls: true
+    skip-cert-verify: false
+    servername: github.githubassets.com
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: W8unRvgA3ykH9S1mx1eDha9hY0PaLiK2ZltXSHP-i2g
+      short-id: 095c83aa715b9c25
+  - name: ____美国专线-03
+    type: vless
+    server: 156.229.166.34
+    port: 9443
+    uuid: 2166091e-1c3b-4282-b3ff-9681de32d00f
+    flow: ''
+    tls: true
+    skip-cert-verify: false
+    servername: github.githubassets.com
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: W8unRvgA3ykH9S1mx1eDha9hY0PaLiK2ZltXSHP-i2g
+      short-id: 095c83aa715b9c25
+  - name: ____美国三网优化-01
+    type: vless
+    server: 143.246.61.211
+    port: 9443
+    uuid: 2166091e-1c3b-4282-b3ff-9681de32d00f
+    flow: ''
+    tls: true
+    skip-cert-verify: false
+    servername: github.githubassets.com
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: W8unRvgA3ykH9S1mx1eDha9hY0PaLiK2ZltXSHP-i2g
+      short-id: 095c83aa715b9c25
+  - name: ____美国三网优化-02
+    type: vless
+    server: 143.246.61.211
+    port: 9443
+    uuid: 2166091e-1c3b-4282-b3ff-9681de32d00f
+    flow: ''
+    tls: true
+    skip-cert-verify: false
+    servername: github.githubassets.com
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: W8unRvgA3ykH9S1mx1eDha9hY0PaLiK2ZltXSHP-i2g
+      short-id: 095c83aa715b9c25
+  - name: ____美国三网优化-03
+    type: vless
+    server: 143.246.61.211
+    port: 9443
+    uuid: 2166091e-1c3b-4282-b3ff-9681de32d00f
+    flow: ''
+    tls: true
+    skip-cert-verify: false
+    servername: github.githubassets.com
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: W8unRvgA3ykH9S1mx1eDha9hY0PaLiK2ZltXSHP-i2g
+      short-id: 095c83aa715b9c25
+  - name: ____日本专线-01
+    type: vless
+    server: 45.192.248.16
+    port: 9443
+    uuid: 2166091e-1c3b-4282-b3ff-9681de32d00f
+    flow: ''
+    tls: true
+    skip-cert-verify: false
+    servername: github.githubassets.com
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: W8unRvgA3ykH9S1mx1eDha9hY0PaLiK2ZltXSHP-i2g
+      short-id: 095c83aa715b9c25
+  - name: ____日本专线-02
+    type: vless
+    server: 45.192.248.16
+    port: 9443
+    uuid: 2166091e-1c3b-4282-b3ff-9681de32d00f
+    flow: ''
+    tls: true
+    skip-cert-verify: false
+    servername: github.githubassets.com
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: W8unRvgA3ykH9S1mx1eDha9hY0PaLiK2ZltXSHP-i2g
+      short-id: 095c83aa715b9c25
+  - name: ____日本专线-03
+    type: vless
+    server: 45.192.248.16
+    port: 9443
+    uuid: 2166091e-1c3b-4282-b3ff-9681de32d00f
+    flow: ''
+    tls: true
+    skip-cert-verify: false
+    servername: github.githubassets.com
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: W8unRvgA3ykH9S1mx1eDha9hY0PaLiK2ZltXSHP-i2g
+      short-id: 095c83aa715b9c25
+  - name: ____新加坡-01
+    type: vless
+    server: 38.180.249.51
+    port: 9443
+    uuid: 2166091e-1c3b-4282-b3ff-9681de32d00f
+    flow: ''
+    tls: true
+    skip-cert-verify: false
+    servername: github.githubassets.com
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: W8unRvgA3ykH9S1mx1eDha9hY0PaLiK2ZltXSHP-i2g
+      short-id: 095c83aa715b9c25
+  - name: ____新加坡-02
+    type: vless
+    server: 38.180.249.51
+    port: 9443
+    uuid: 2166091e-1c3b-4282-b3ff-9681de32d00f
+    flow: ''
+    tls: true
+    skip-cert-verify: false
+    servername: github.githubassets.com
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: W8unRvgA3ykH9S1mx1eDha9hY0PaLiK2ZltXSHP-i2g
+      short-id: 095c83aa715b9c25
+  - name: ____新加坡-03
+    type: vless
+    server: 38.180.249.51
+    port: 9443
+    uuid: 2166091e-1c3b-4282-b3ff-9681de32d00f
+    flow: ''
+    tls: true
+    skip-cert-verify: false
+    servername: github.githubassets.com
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: W8unRvgA3ykH9S1mx1eDha9hY0PaLiK2ZltXSHP-i2g
+      short-id: 095c83aa715b9c25
+  - name: ____马来西亚-01
+    type: vless
+    server: 38.244.149.235
+    port: 9443
+    uuid: 2166091e-1c3b-4282-b3ff-9681de32d00f
+    flow: ''
+    tls: true
+    skip-cert-verify: false
+    servername: github.githubassets.com
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: W8unRvgA3ykH9S1mx1eDha9hY0PaLiK2ZltXSHP-i2g
+      short-id: 095c83aa715b9c25
+  - name: ____马来西亚-02
+    type: vless
+    server: 38.244.149.235
+    port: 9443
+    uuid: 2166091e-1c3b-4282-b3ff-9681de32d00f
+    flow: ''
+    tls: true
+    skip-cert-verify: false
+    servername: github.githubassets.com
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: W8unRvgA3ykH9S1mx1eDha9hY0PaLiK2ZltXSHP-i2g
+      short-id: 095c83aa715b9c25
+  - name: ____马来西亚-03
+    type: vless
+    server: 38.244.149.235
+    port: 9443
+    uuid: 2166091e-1c3b-4282-b3ff-9681de32d00f
+    flow: ''
+    tls: true
+    skip-cert-verify: false
+    servername: github.githubassets.com
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: W8unRvgA3ykH9S1mx1eDha9hY0PaLiK2ZltXSHP-i2g
+      short-id: 095c83aa715b9c25
+  - name: ____乌克兰-01
+    type: vless
+    server: 130.0.233.186
+    port: 9443
+    uuid: 2166091e-1c3b-4282-b3ff-9681de32d00f
+    flow: ''
+    tls: true
+    skip-cert-verify: false
+    servername: github.githubassets.com
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: W8unRvgA3ykH9S1mx1eDha9hY0PaLiK2ZltXSHP-i2g
+      short-id: 095c83aa715b9c25
+  - name: ____乌克兰-02
+    type: vless
+    server: 130.0.233.186
+    port: 9443
+    uuid: 2166091e-1c3b-4282-b3ff-9681de32d00f
+    flow: ''
+    tls: true
+    skip-cert-verify: false
+    servername: github.githubassets.com
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: W8unRvgA3ykH9S1mx1eDha9hY0PaLiK2ZltXSHP-i2g
+      short-id: 095c83aa715b9c25
+  - name: ____乌克兰-03
+    type: vless
+    server: 130.0.233.186
+    port: 9443
+    uuid: 2166091e-1c3b-4282-b3ff-9681de32d00f
+    flow: ''
+    tls: true
+    skip-cert-verify: false
+    servername: github.githubassets.com
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: W8unRvgA3ykH9S1mx1eDha9hY0PaLiK2ZltXSHP-i2g
+      short-id: 095c83aa715b9c25
+  - name: 自动选择_Ins_YouTube_ChatGPT等_
+    type: vless
+    server: 137.220.151.22
+    port: 443
+    uuid: 2d04a2a3-9c80-4168-807e-6ae2331302ae
+    flow: xtls-rprx-vision
+    tls: true
+    skip-cert-verify: false
+    servername: www.apple.com
+    client-fingerprint: safari
+    reality-opts:
+      public-key: NnyuyEzMRCdKZ5q3Oa55z2WSnnTLYtKLqqdxOqgIGXA
+      short-id: 9fa9a26194155f26
+  - name: 美国专线_YouTube_Ins_Netflix等_
+    type: vless
+    server: 45.158.127.157
+    port: 443
+    uuid: 02982f63-3940-43fd-ad89-6e17b861a397
+    flow: xtls-rprx-vision
+    tls: true
+    skip-cert-verify: false
+    servername: www.apple.com
+    client-fingerprint: safari
+    reality-opts:
+      public-key: uyrtdbQjXJu1lc1CtZqSNrLhkFfJADk9i24-cSBcDUA
+      short-id: 4df744f6d1537969
+  - name: 德国专线_YouTube_Netflix_Disney_等_
+    type: vless
+    server: 45.129.242.187
+    port: 443
+    uuid: 1e938e70-de83-4ab3-94dd-7413e5341366
+    flow: xtls-rprx-vision
+    tls: true
+    skip-cert-verify: false
+    servername: www.apple.com
+    client-fingerprint: safari
+    reality-opts:
+      public-key: v5nETViDgQBMLUaX3SDx785goXpunHLMVTVQ-p-fTEk
+      short-id: 8a8fb1485bee7c6b
+  - name: 新加坡极速_YouTube_Ins_X等_
+    type: vless
+    server: 185.225.20.52
+    port: 443
+    uuid: 7dce3b3a-0da0-4d91-86f5-c0d1dc842ee4
+    flow: xtls-rprx-vision
+    tls: true
+    skip-cert-verify: false
+    servername: www.apple.com
+    client-fingerprint: safari
+    reality-opts:
+      public-key: pV8S4tikbNUV72PQmCEIA9iRPKu2ThK6HaDfGIzmpjk
+      short-id: d53b51d3ca037fe1
+  - name: 日本低延迟_YouTube_ChatGPT等_
+    type: vless
+    server: 45.196.233.99
+    port: 443
+    uuid: e452bc8a-1f59-4a77-a2a2-648c80ecb20c
+    flow: xtls-rprx-vision
+    tls: true
+    skip-cert-verify: false
+    servername: www.apple.com
+    client-fingerprint: safari
+    reality-opts:
+      public-key: Kv6HtmTzakWJpcO2L2Di3ZlmXx8MqSnPJFyNq9DQqjw
+      short-id: 7a9ae052501a0b9a
+  - name: 日本极速_YouTube_ChatGPT等_
+    type: vless
+    server: 23.175.24.80
+    port: 443
+    uuid: 1666cdd5-b83f-4dfd-bc46-3af4325e5d87
+    flow: xtls-rprx-vision
+    tls: true
+    skip-cert-verify: false
+    servername: www.apple.com
+    client-fingerprint: safari
+    reality-opts:
+      public-key: Nb6KtUoSPcJeZHjPLVto3FRbS3nhNrHRT_0_7H9h-QE
+      short-id: 9c29d5bf24cadfba
+  - name: 视频专线
+    type: vless
+    server: 192.220.55.13
+    port: 443
+    uuid: 8cb81ffe-6592-43be-acf9-56e65d6279da
+    flow: xtls-rprx-vision
+    tls: true
+    skip-cert-verify: false
+    servername: www.apple.com
+    client-fingerprint: safari
+    reality-opts:
+      public-key: Xbz_wDcKERroczzETrL3CfvlNmrPSZu3F_hL2PEQ6mA
+      short-id: f9acc92591c4a35a
+  - name: AI专线
+    type: vless
+    server: 116.206.93.231
+    port: 443
+    uuid: d458871d-dc20-49e8-9ea9-05bbe11d76fb
+    flow: xtls-rprx-vision
+    tls: true
+    skip-cert-verify: false
+    servername: www.apple.com
+    client-fingerprint: safari
+    reality-opts:
+      public-key: FzmJ596D6L1DDMgw-zpYsZQz4FpwquYzMZ7Q3RhG4Bk
+      short-id: 66085d87539d74b4
+  - name: NewYork_PAC
+    type: ss
+    server: 199.127.152.29
+    port: 18443
+    password: kito1TZGtKyqAOQ8
+    cipher: aes-256-gcm
+  - name: Singapore
+    type: ss
+    server: 103.115.17.239
+    port: 8388
+    password: Gw2rYjSCojoeOjVT
+    cipher: aes-256-gcm
+  - name: Japan
+    type: ss
+    server: 167.17.179.93
+    port: 8388
+    password: KVR5xUsp2B3p88Uy
+    cipher: aes-256-gcm
+  - name: HongKong
+    type: ss
+    server: 91.149.236.106
+    port: 8388
+    password: PTStOhUo3owuLdWa
+    cipher: aes-256-gcm
+  - name: France
+    type: ss
+    server: 185.22.153.117
+    port: 18443
+    password: NTiHBg64fsY8u8DbGrtypD9gPGSL386p
+    cipher: aes-256-gcm
+  - name: Thailand
+    type: ss
+    server: 86.107.50.242
+    port: 18443
+    password: dmJDtsxs41dBer8X
+    cipher: aes-256-gcm
+  - name: Australia
+    type: ss
+    server: 46.29.164.13
+    port: 18443
+    password: Lpq5UPVHtQYiuB9jEUNc2WkeIYCUH9DE
+    cipher: aes-256-gcm
+  - name: Montreal
+    type: ss
+    server: 46.17.47.58
+    port: 18443
+    password: cCMJgJTA3BA489YUYrFq7XHXSiSpWlLa
+    cipher: aes-256-gcm
+  - name: Italy
+    type: ss
+    server: 2.56.242.207
+    port: 18443
+    password: PMaWKfOrCdResU4Zi
+    cipher: aes-256-gcm
+  - name: British
+    type: ss
+    server: 185.22.153.118
+    port: 18443
+    password: BCUpLQqELzCOcX9GnNXn8k0
+    cipher: aes-256-gcm
+  - name: British_1
+    type: ss
+    server: 185.22.153.118
+    port: 18443
+    password: BCUpLQqELzCOcX9GnNXn8k0
+    cipher: aes-256-gcm
+  - name: HongKong_1
+    type: ss
+    server: 91.149.236.104
+    port: 18443
+    password: IiMpcTnv3eXVF6uHSHLuv7xNfE
+    cipher: aes-256-gcm
+  - name: Russia
+    type: ss
+    server: 185.22.153.114
+    port: 18443
+    password: P
+    cipher: aes-256-gcm
+  - name: Thailand_1
+    type: ss
+    server: 86.107.50.242
+    port: 18443
+    password: dmJDtsxs41dBer8X
+    cipher: aes-256-gcm
+  - name: Russia_1
+    type: ss
+    server: 185.22.153.114
+    port: 18443
+    password: P
+    cipher: aes-256-gcm
+proxy-groups:
+  - name: PROXY
+    type: select
+    proxies:
+      - 自动选择
+      - DeVPN-KR-0
+      - DeVPN-KR-1
+      - DeVPN-KR-2
+      - DeVPN-KR-3
+      - DeVPN-KR-4
+      - DeVPN-KR-5
+      - DeVPN-KR-6
+      - DeVPN-KR-7
+      - DeVPN-SG-0
+      - DeVPN-SG-1
+      - DeVPN-SG-2
+      - DeVPN-SG-3
+      - DeVPN-SG-4
+      - DeVPN-SG-5
+      - DeVPN-SG-6
+      - DeVPN-SG-7
+      - DeVPN-SG-8
+      - DeVPN-SG-9
+      - DeVPN-JP-0
+      - DeVPN-JP-1
+      - DeVPN-JP-2
+      - DeVPN-JP-3
+      - DeVPN-JP-4
+      - DeVPN-JP-5
+      - DeVPN-JP-6
+      - DeVPN-JP-7
+      - DeVPN-JP-8
+      - DeVPN-JP-9
+      - DeVPN-DE-0
+      - DeVPN-DE-1
+      - DeVPN-DE-2
+      - DeVPN-DE-3
+      - DeVPN-DE-4
+      - DeVPN-DE-5
+      - DeVPN-DE-6
+      - DeVPN-DE-7
+      - DeVPN-DE-8
+      - DeVPN-DE-9
+      - DeVPN-HK-0
+      - DeVPN-HK-1
+      - DeVPN-HK-2
+      - DeVPN-HK-3
+      - DeVPN-HK-4
+      - DeVPN-HK-5
+      - DeVPN-HK-6
+      - DeVPN-HK-7
+      - DeVPN-HK-8
+      - DeVPN-HK-9
+      - DeVPN-US-0
+      - DeVPN-US-1
+      - DeVPN-US-2
+      - DeVPN-US-3
+      - DeVPN-US-4
+      - DeVPN-US-5
+      - DeVPN-US-6
+      - DeVPN-US-7
+      - DeVPN-US-8
+      - DeVPN-ID-0
+      - DeVPN-ID-1
+      - DeVPN-ID-2
+      - DeVPN-ID-3
+      - DeVPN-ID-4
+      - DeVPN-ID-5
+      - DeVPN-ID-6
+      - DeVPN-ID-7
+      - DeVPN-ID-8
+      - ____香港直连-01
+      - ____香港直连-02
+      - ____香港直连-03
+      - ____香港三网-01
+      - ____香港三网-02
+      - ____香港三网-03
+      - ____台湾专线-01
+      - ____台湾专线-02
+      - ____台湾专线-03
+      - ____美国专线-01
+      - ____美国专线-02
+      - ____美国专线-03
+      - ____美国三网优化-01
+      - ____美国三网优化-02
+      - ____美国三网优化-03
+      - ____日本专线-01
+      - ____日本专线-02
+      - ____日本专线-03
+      - ____新加坡-01
+      - ____新加坡-02
+      - ____新加坡-03
+      - ____马来西亚-01
+      - ____马来西亚-02
+      - ____马来西亚-03
+      - ____乌克兰-01
+      - ____乌克兰-02
+      - ____乌克兰-03
+      - 自动选择_Ins_YouTube_ChatGPT等_
+      - 美国专线_YouTube_Ins_Netflix等_
+      - 德国专线_YouTube_Netflix_Disney_等_
+      - 新加坡极速_YouTube_Ins_X等_
+      - 日本低延迟_YouTube_ChatGPT等_
+      - 日本极速_YouTube_ChatGPT等_
+      - 视频专线
+      - AI专线
+      - NewYork_PAC
+      - Singapore
+      - Japan
+      - HongKong
+      - France
+      - Thailand
+      - Australia
+      - Montreal
+      - Italy
+      - British
+      - British_1
+      - HongKong_1
+      - Russia
+      - Thailand_1
+      - Russia_1
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+  - name: 自动选择
+    type: url-test
+    proxies: &ref_0
+      - DeVPN-KR-0
+      - DeVPN-KR-1
+      - DeVPN-KR-2
+      - DeVPN-KR-3
+      - DeVPN-KR-4
+      - DeVPN-KR-5
+      - DeVPN-KR-6
+      - DeVPN-KR-7
+      - DeVPN-SG-0
+      - DeVPN-SG-1
+      - DeVPN-SG-2
+      - DeVPN-SG-3
+      - DeVPN-SG-4
+      - DeVPN-SG-5
+      - DeVPN-SG-6
+      - DeVPN-SG-7
+      - DeVPN-SG-8
+      - DeVPN-SG-9
+      - DeVPN-JP-0
+      - DeVPN-JP-1
+      - DeVPN-JP-2
+      - DeVPN-JP-3
+      - DeVPN-JP-4
+      - DeVPN-JP-5
+      - DeVPN-JP-6
+      - DeVPN-JP-7
+      - DeVPN-JP-8
+      - DeVPN-JP-9
+      - DeVPN-DE-0
+      - DeVPN-DE-1
+      - DeVPN-DE-2
+      - DeVPN-DE-3
+      - DeVPN-DE-4
+      - DeVPN-DE-5
+      - DeVPN-DE-6
+      - DeVPN-DE-7
+      - DeVPN-DE-8
+      - DeVPN-DE-9
+      - DeVPN-HK-0
+      - DeVPN-HK-1
+      - DeVPN-HK-2
+      - DeVPN-HK-3
+      - DeVPN-HK-4
+      - DeVPN-HK-5
+      - DeVPN-HK-6
+      - DeVPN-HK-7
+      - DeVPN-HK-8
+      - DeVPN-HK-9
+      - DeVPN-US-0
+      - DeVPN-US-1
+      - DeVPN-US-2
+      - DeVPN-US-3
+      - DeVPN-US-4
+      - DeVPN-US-5
+      - DeVPN-US-6
+      - DeVPN-US-7
+      - DeVPN-US-8
+      - DeVPN-ID-0
+      - DeVPN-ID-1
+      - DeVPN-ID-2
+      - DeVPN-ID-3
+      - DeVPN-ID-4
+      - DeVPN-ID-5
+      - DeVPN-ID-6
+      - DeVPN-ID-7
+      - DeVPN-ID-8
+      - ____香港直连-01
+      - ____香港直连-02
+      - ____香港直连-03
+      - ____香港三网-01
+      - ____香港三网-02
+      - ____香港三网-03
+      - ____台湾专线-01
+      - ____台湾专线-02
+      - ____台湾专线-03
+      - ____美国专线-01
+      - ____美国专线-02
+      - ____美国专线-03
+      - ____美国三网优化-01
+      - ____美国三网优化-02
+      - ____美国三网优化-03
+      - ____日本专线-01
+      - ____日本专线-02
+      - ____日本专线-03
+      - ____新加坡-01
+      - ____新加坡-02
+      - ____新加坡-03
+      - ____马来西亚-01
+      - ____马来西亚-02
+      - ____马来西亚-03
+      - ____乌克兰-01
+      - ____乌克兰-02
+      - ____乌克兰-03
+      - 自动选择_Ins_YouTube_ChatGPT等_
+      - 美国专线_YouTube_Ins_Netflix等_
+      - 德国专线_YouTube_Netflix_Disney_等_
+      - 新加坡极速_YouTube_Ins_X等_
+      - 日本低延迟_YouTube_ChatGPT等_
+      - 日本极速_YouTube_ChatGPT等_
+      - 视频专线
+      - AI专线
+      - NewYork_PAC
+      - Singapore
+      - Japan
+      - HongKong
+      - France
+      - Thailand
+      - Australia
+      - Montreal
+      - Italy
+      - British
+      - British_1
+      - HongKong_1
+      - Russia
+      - Thailand_1
+      - Russia_1
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+  - name: 故障转移
+    type: fallback
+    proxies: *ref_0
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+  - name: 负载均衡
+    type: load-balance
+    proxies: *ref_0
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    strategy: round-robin
+  - name: 国内直连
+    type: select
+    proxies:
+      - DIRECT
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+rules:
+  - DOMAIN-KEYWORD,facebook,PROXY
+  - DOMAIN-KEYWORD,google,PROXY
+  - DOMAIN-KEYWORD,gmail,PROXY
+  - DOMAIN-KEYWORD,twitter,PROXY
+  - DOMAIN-KEYWORD,youtube,PROXY
+  - DOMAIN-KEYWORD,instagram,PROXY
+  - DOMAIN-KEYWORD,telegram,PROXY
+  - DOMAIN-KEYWORD,whatsapp,PROXY
+  - DOMAIN-KEYWORD,netflix,PROXY
+  - DOMAIN-KEYWORD,spotify,PROXY
+  - DOMAIN-KEYWORD,github,PROXY
+  - DOMAIN-KEYWORD,cloudflare,PROXY
+  - DOMAIN-SUFFIX,google.com,PROXY
+  - DOMAIN-SUFFIX,youtube.com,PROXY
+  - DOMAIN-SUFFIX,facebook.com,PROXY
+  - DOMAIN-SUFFIX,twitter.com,PROXY
+  - DOMAIN-SUFFIX,instagram.com,PROXY
+  - DOMAIN-SUFFIX,telegram.org,PROXY
+  - DOMAIN-SUFFIX,whatsapp.com,PROXY
+  - DOMAIN-SUFFIX,netflix.com,PROXY
+  - DOMAIN-SUFFIX,spotify.com,PROXY
+  - DOMAIN-SUFFIX,github.com,PROXY
+  - DOMAIN-SUFFIX,cloudflare.com,PROXY
+  - DOMAIN-SUFFIX,github.io,PROXY
+  - DOMAIN-SUFFIX,vercel.app,PROXY
+  - DOMAIN-SUFFIX,workers.dev,PROXY
+  - DOMAIN-SUFFIX,openai.com,PROXY
+  - DOMAIN-SUFFIX,anthropic.com,PROXY
+  - DOMAIN-SUFFIX,claude.ai,PROXY
+  - DOMAIN-SUFFIX,chatgpt.com,PROXY
+  - DOMAIN-SUFFIX,oaistatic.com,PROXY
+  - DOMAIN-SUFFIX,oaiusercontent.com,PROXY
+  - DOMAIN-SUFFIX,cn,DIRECT
+  - DOMAIN-SUFFIX,baidu.com,DIRECT
+  - DOMAIN-SUFFIX,qq.com,DIRECT
+  - DOMAIN-SUFFIX,weixin.com,DIRECT
+  - DOMAIN-SUFFIX,taobao.com,DIRECT
+  - DOMAIN-SUFFIX,jd.com,DIRECT
+  - DOMAIN-SUFFIX,163.com,DIRECT
+  - DOMAIN-SUFFIX,sina.com,DIRECT
+  - DOMAIN-SUFFIX,sohu.com,DIRECT
+  - DOMAIN-SUFFIX,ifeng.com,DIRECT
+  - DOMAIN-SUFFIX,people.com.cn,DIRECT
+  - DOMAIN-SUFFIX,xinhuanet.com,DIRECT
+  - DOMAIN-SUFFIX,chinanews.com,DIRECT
+  - DOMAIN-SUFFIX,aliyun.com,DIRECT
+  - DOMAIN-SUFFIX,tencent.com,DIRECT
+  - DOMAIN-SUFFIX,cloud.tencent.com,DIRECT
+  - DOMAIN-SUFFIX,cnblogs.com,DIRECT
+  - DOMAIN-SUFFIX,csdn.net,DIRECT
+  - DOMAIN-SUFFIX,zhihu.com,DIRECT
+  - DOMAIN-SUFFIX,bilibili.com,DIRECT
+  - DOMAIN-SUFFIX,acfun.cn,DIRECT
+  - DOMAIN-SUFFIX,douyin.com,DIRECT
+  - DOMAIN-SUFFIX,kuaishou.com,DIRECT
+  - DOMAIN-SUFFIX,weibo.com,DIRECT
+  - DOMAIN-SUFFIX,toutiao.com,DIRECT
+  - DOMAIN-SUFFIX,meituan.com,DIRECT
+  - DOMAIN-SUFFIX,dianping.com,DIRECT
+  - DOMAIN-SUFFIX,ctrip.com,DIRECT
+  - DOMAIN-SUFFIX,fliggy.com,DIRECT
+  - DOMAIN-SUFFIX,12306.cn,DIRECT
+  - DOMAIN-SUFFIX,bankcomm.com,DIRECT
+  - DOMAIN-SUFFIX,icbc.com.cn,DIRECT
+  - DOMAIN-SUFFIX,cmbchina.com,DIRECT
+  - DOMAIN-SUFFIX,ccb.com,DIRECT
+  - DOMAIN-SUFFIX,abcchina.com,DIRECT
+  - DOMAIN-SUFFIX,boc.cn,DIRECT
+  - GEOSITE,CN,DIRECT
+  - GEOIP,CN,DIRECT
+  - IP-CIDR,127.0.0.0/8,DIRECT
+  - IP-CIDR,10.0.0.0/8,DIRECT
+  - IP-CIDR,172.16.0.0/12,DIRECT
+  - IP-CIDR,192.168.0.0/16,DIRECT
+  - IP-CIDR,100.64.0.0/10,DIRECT
+  - IP-CIDR,224.0.0.0/4,DIRECT
+  - IP-CIDR6,::1/128,DIRECT
+  - IP-CIDR6,fc00::/7,DIRECT
+  - IP-CIDR6,fe80::/10,DIRECT
+  - MATCH,PROXY
