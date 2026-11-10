@@ -1,1 +1,1 @@
-vless://e452bc8a-1f59-4a77-a2a2-648c80ecb20c@45.196.233.99:443?encryption=none&security=reality&sni=www.apple.com&fp=safari&pbk=Kv6HtmTzakWJpcO2L2Di3ZlmXx8MqSnPJFyNq9DQqjw&sid=7a9ae052501a0b9a&type=tcp&flow=xtls-rprx-vision#%E6%97%A5%E6%9C%AC%E4%BD%8E%E5%BB%B6%E8%BF%9F%20YouTube%20ChatGPT%E7%AD%89
+vless://2d04a2a3-9c80-4168-807e-6ae2331302ae@137.220.151.22:443?encryption=none&security=reality&sni=www.apple.com&fp=safari&pbk=NnyuyEzMRCdKZ5q3Oa55z2WSnnTLYtKLqqdxOqgIGXA&sid=9fa9a26194155f26&type=tcp&flow=xtls-rprx-vision#%E8%A7%86%E9%A2%91%E4%B8%93%E7%BA%BF
