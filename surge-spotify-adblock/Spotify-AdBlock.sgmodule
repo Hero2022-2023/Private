@@ -1,0 +1,25 @@
+#!name=Spotify 去广告
+#!desc=v1.0.0 去除 Spotify 播放音频广告与首页/搜索赞助内容, 恢复歌手/专辑列表正常展示, 去除强制随机播放。原理: 对 bootstrap/customize 的 protobuf 客户端配置做补丁 (ads=false 等), 并拦截 pendragon/ad-logic/ads 广告决策端点。核心 protobuf 脚本为 app2smile 维护的开源脚本, 模块以远程地址引用并每日自动更新 (script-update-interval=86400), Spotify 改协议时上游更新即可, 无需重装模块。需开启 MitM 并信任 Surge 证书, 要求 iOS 15+。注意: 音质不能设为「超高/Very High」, 那需要真实 Premium; 本模块不提供离线下载与账号层面的会员。
+#!system=ios
+#!version=1.0.0
+#!author=Muse(模块与拦截规则) / app2smile(核心脚本 spotify-proto.js, spotify-json.js)
+#!category=去广告
+
+[Header Rewrite]
+# customize 接口带 if-none-match 时服务器可能返回 304, 脚本拿不到 body 就不生效, 先删掉这个头
+http-request ^https:\/\/(?:[\w-]+-spclient|spclient\.wg)\.spotify\.com(?::443)?\/user-customization-service\/v1\/customize$ header-del if-none-match
+
+[URL Rewrite]
+# pendragon: 播放广告决策端点, 返回空字典让 App 以为没有广告要插播
+^https:\/\/(?:[\w-]+-spclient|spclient\.wg)\.spotify\.com(?::443)?\/pendragon\/ _ reject-dict
+# ad-logic / ads: 明确的广告逻辑与广告物料路径 (带路径边界, 不误伤 adsense 等正常路径)
+^https:\/\/(?:[\w-]+-spclient|spclient\.wg)\.spotify\.com(?::443)?\/(?:ad-logic|ads)(?:\/|\?|$) _ reject-dict
+
+[Script]
+# 歌手/专辑页: 把 platform=iphone 改成 ipad, 恢复列表正常展示 (http-request 改 URL)
+spotify-json = type=http-request, pattern=^https:\/\/(?:[\w-]+-spclient|spclient\.wg)\.spotify\.com(?::443)?\/(artistview\/v1\/artist|album-entity-view\/v2\/album)\/, requires-body=0, timeout=10, script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-json.js, script-update-interval=86400
+# 客户端配置补丁: bootstrap / customize 的 protobuf 响应里把 ads 关掉并写入 premium 客户端属性, 音频广告随之消失
+spotify-proto = type=http-response, pattern=^https:\/\/(?:[\w-]+-spclient|spclient\.wg)\.spotify\.com(?::443)?\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$, requires-body=1, binary-body-mode=1, max-size=0, timeout=10, script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-proto.js, script-update-interval=86400
+
+[MITM]
+hostname = %APPEND% spclient.wg.spotify.com, *spclient.spotify.com
