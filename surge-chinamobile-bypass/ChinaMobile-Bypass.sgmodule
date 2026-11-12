@@ -1,7 +1,7 @@
-#!name=中国移动直连绕过
-#!desc=v1.1.0 让 *.chinamobile.com 及中国移动 App 常用域名 (10086.cn / cmpassport.com / 139.com) 在 Surge 开启时强制直连: 模块规则置顶走 DIRECT, [General] 追加 skip-proxy 与 always-real-ip (返回真实 IP, 不给 Fake-IP), [MITM] 排除这些域名避免证书绑定失败。v1.1.0 新增 compatibility-mode=5: VIF 不再声明默认路由、改用多条小路由接管, 部分按「默认路由/主接口是否为 VPN」判断的 App 在此模式下会认为 VPN 未开启 (官方以此绕 HomeKit 摄像头等兼容问题)。切换模式后必须彻底停止再启动 Surge 才生效。本模块与 ProxyOnly 版 (compatibility-mode=2) 只能启用一个。注意: 若 App 查的是 VPN 描述文件/utun 接口是否存在本身, 任何模式都藏不掉, 只能在用它时暂停 Surge。
+#!name=中国移动直连绕过 (模式5, 实测无效勿启用)
+#!desc=v1.1.1 【实测无效, 请勿启用】2026-11-12 真机验证: compatibility-mode=5 (VIF 不设默认路由) 下中国移动 App 仍闪退; 有效的是 ChinaMobile-Bypass-ProxyOnly.sgmodule (compatibility-mode=2), 请改用那个并删除/停用本模块。本文件保留仅作测试记录。原说明: 让 *.chinamobile.com 及中国移动 App 常用域名 (10086.cn / cmpassport.com / 139.com) 强制直连: 规则置顶 DIRECT, skip-proxy 与 always-real-ip 追加 (真实 IP), MITM 排除这些域名。
 #!system=ios
-#!version=1.1.0
+#!version=1.1.1
 #!author=Muse
 #!category=直连绕过
 
