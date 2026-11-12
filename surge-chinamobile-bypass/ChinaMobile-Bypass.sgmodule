@@ -1,0 +1,19 @@
+#!name=中国移动直连绕过
+#!desc=v1.0.0 让 *.chinamobile.com 及中国移动 App 常用域名 (10086.cn / cmpassport.com / 139.com) 在 Surge 开启时强制直连: 模块规则置顶走 DIRECT, [General] 追加 skip-proxy 与 always-real-ip (返回真实 IP, 不给 Fake-IP), [MITM] 排除这些域名避免证书绑定失败, 缓解中国移动 App 因代理/出口 IP 闪退或登录失败。需在「规则模式」下使用, 全局代理模式下规则不生效。注意: 若 App 检测的是本机 utun VPN 接口本身 (全局直连下仍闪退), 任何规则都藏不掉, 只能在用它时暂停 Surge。本模块不含 tun-excluded-routes: 该项只能按 IP 段写, 移动 IP 段分散且大段排除在 iOS 上有已知内存问题, 拿到具体服务器 IP 后再补。
+#!system=ios
+#!version=1.0.0
+#!author=Muse
+#!category=直连绕过
+
+[General]
+skip-proxy = %APPEND% *.chinamobile.com, *.10086.cn, *.cmpassport.com, *.139.com
+always-real-ip = %APPEND% *.chinamobile.com, *.10086.cn, *.cmpassport.com, *.139.com
+
+[Rule]
+DOMAIN-SUFFIX,chinamobile.com,DIRECT
+DOMAIN-SUFFIX,10086.cn,DIRECT
+DOMAIN-SUFFIX,cmpassport.com,DIRECT
+DOMAIN-SUFFIX,139.com,DIRECT
+
+[MITM]
+hostname = %APPEND% -*.chinamobile.com, -*.10086.cn, -*.cmpassport.com, -*.139.com
