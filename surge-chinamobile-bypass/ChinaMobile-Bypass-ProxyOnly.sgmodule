@@ -1,7 +1,7 @@
 #!name=中国移动直连绕过 (仅代理版)
-#!desc=v1.1.0 2026-11-12 真机验证: 本模块启用后中国移动 App 在 Surge 开启下可正常打开 (模式 5 实测无效)。原理: compatibility-mode=2 仅代理接管, VIF 不再接管任何流量, App 查的正是 VIF 接管这件事; 同时 chinamobile.com / 10086.cn / cmpassport.com / 139.com 全走 DIRECT + 真实 IP + MITM 排除。注意这是全局工作模式: 不遵循系统代理的 App 不会被 Surge 接管 (流量直走物理网络, 不经节点), 切换/启用后必须彻底停止再启动 Surge 才生效。本模块启用时不要再启用主模块 (模式 5 那个)。Surge 的 VPN 描述文件仍连接、状态栏 VPN 图标仍在, 属正常。
+#!desc=v1.1.1 此前标注的「模式 2 实测有效」源于用户误点选项, 已撤回; 用户实际反馈是用更新后的模块仍无法打开。compatibility-mode 写在模块里是否真能切换 Surge 工作模式尚不确定, 决定性复核请改用同目录的 Test-Mode2.conf 测试配置 (模式直接写在配置 [General] 里, 停用全部模块后切换该配置测试)。本模块内容: compatibility-mode=2 仅代理接管 + chinamobile.com / 10086.cn / cmpassport.com / 139.com 全走 DIRECT + 真实 IP + MITM 排除。启用后必须彻底停止再启动 Surge。
 #!system=ios
-#!version=1.1.0
+#!version=1.1.1
 #!author=Muse
 #!category=直连绕过
 
