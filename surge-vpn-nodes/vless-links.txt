@@ -1,2 +1,1 @@
-vless://7dce3b3a-0da0-4d91-86f5-c0d1dc842ee4@185.225.20.52:443?encryption=none&security=reality&sni=www.apple.com&fp=safari&pbk=pV8S4tikbNUV72PQmCEIA9iRPKu2ThK6HaDfGIzmpjk&sid=d53b51d3ca037fe1&type=tcp&flow=xtls-rprx-vision#%E6%96%B0%E5%8A%A0%E5%9D%A1%E6%9E%81%E9%80%9F%20YouTube%20Ins%20X%E7%AD%89
-vless://1666cdd5-b83f-4dfd-bc46-3af4325e5d87@23.175.24.80:443?encryption=none&security=reality&sni=www.apple.com&fp=safari&pbk=Nb6KtUoSPcJeZHjPLVto3FRbS3nhNrHRT_0_7H9h-QE&sid=9c29d5bf24cadfba&type=tcp&flow=xtls-rprx-vision#%E6%97%A5%E6%9C%AC%E6%9E%81%E9%80%9F%20YouTube%20ChatGPT%E7%AD%89
+# No VLESS nodes passed this round's delay test.
