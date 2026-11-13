@@ -1,7 +1,7 @@
 #!name=中国移动直连绕过 (模式5, 实测无效勿启用)
-#!desc=v1.1.1 【实测无效, 请勿启用】2026-11-12 真机验证: compatibility-mode=5 (VIF 不设默认路由) 下中国移动 App 仍闪退; 有效的是 ChinaMobile-Bypass-ProxyOnly.sgmodule (compatibility-mode=2), 请改用那个并删除/停用本模块。本文件保留仅作测试记录。原说明: 让 *.chinamobile.com 及中国移动 App 常用域名 (10086.cn / cmpassport.com / 139.com) 强制直连: 规则置顶 DIRECT, skip-proxy 与 always-real-ip 追加 (真实 IP), MITM 排除这些域名。
+#!desc=v1.1.2 【实测无效, 请勿启用】2026-11-12 真机验证: compatibility-mode=5 (VIF 不设默认路由) 下中国移动 App 仍闪退; 模式 2 亦未确认有效 (此前「模式 2 能打开」是用户误点选项的误报, 已撤回), 决定性复核请改用同目录 Test-Mode2.conf (模式直接写在配置里)。请停用本模块。本文件保留仅作测试记录。原说明: 让 *.chinamobile.com 及中国移动 App 常用域名 (10086.cn / cmpassport.com / 139.com) 强制直连: 规则置顶 DIRECT, skip-proxy 与 always-real-ip 追加 (真实 IP), MITM 排除这些域名。
 #!system=ios
-#!version=1.1.1
+#!version=1.1.2
 #!author=Muse
 #!category=直连绕过
 
