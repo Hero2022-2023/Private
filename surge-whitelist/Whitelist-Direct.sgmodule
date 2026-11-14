@@ -1,0 +1,18 @@
+#!name=直连白名单
+#!desc=v1.0.0 把瞬影PRO、移动云盘的流量强制直连, 不走任何代理节点: 瞬影PRO线路域名 syemby.com (PRO 服只认中国大陆 IP, 走节点出口会被拒/封号), 139 云盘接口域名 139.com, 移动云盘对象存储域名 cmecloud.cn (139 的文件直链走 *.cmecloud.cn, 走代理会慢且易断)。三层一起: 规则 DIRECT (模块规则优先于主配置), skip-proxy 与 always-real-ip 追加 (拿真实 IP, CDN 按真实位置调度), MITM 排除这三个域名。本模块不带 compatibility-mode, 不改 Surge 的接管方式。
+#!system=ios
+#!version=1.0.0
+#!author=Muse
+#!category=直连白名单
+
+[General]
+skip-proxy = %APPEND% *.syemby.com, *.cmecloud.cn, *.139.com
+always-real-ip = %APPEND% *.syemby.com, *.cmecloud.cn, *.139.com
+
+[Rule]
+DOMAIN-SUFFIX,syemby.com,DIRECT
+DOMAIN-SUFFIX,cmecloud.cn,DIRECT
+DOMAIN-SUFFIX,139.com,DIRECT
+
+[MITM]
+hostname = %APPEND% -*.syemby.com, -*.cmecloud.cn, -*.139.com
