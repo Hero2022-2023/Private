@@ -1,16 +1,11 @@
-#!name=瞬影PRO直连白名单
-#!desc=v1.0.1 只针对瞬影PRO线路 yd.emby.syemby.com 一个域名, 与其他模块无关: 把它的流量强制直连, 不走任何代理节点 (PRO 服只认中国大陆 IP, 走节点出口会被拒, 多地异地 IP 还可能封号)。三层一起: 规则 DIRECT (模块规则优先于主配置), skip-proxy 与 always-real-ip 追加 (拿真实 IP), MITM 排除该域名。本模块不带 compatibility-mode, 不改 Surge 的接管方式。
+#!name=瞬影白名单
+#!desc=v1.1.0 瞬影播放链路直连白名单: 服务器 yd.emby.syemby.com 与其 302 媒体流走的 139 接口 (139.com) 和移动云盘对象存储 (cmecloud.cn) 全部强制 DIRECT, 不走代理节点 (瞬影PRO只认中国大陆 IP)。本模块只含下面三条规则, 无其他段落; Surge 模块规则会插入主配置规则列表最前面, 优先于主配置生效。
 #!system=ios
-#!version=1.0.1
+#!version=1.1.0
 #!author=Muse
 #!category=直连白名单
 
-[General]
-skip-proxy = %APPEND% yd.emby.syemby.com, *.yd.emby.syemby.com
-always-real-ip = %APPEND% yd.emby.syemby.com, *.yd.emby.syemby.com
-
 [Rule]
 DOMAIN-SUFFIX,yd.emby.syemby.com,DIRECT
-
-[MITM]
-hostname = %APPEND% -yd.emby.syemby.com, -*.yd.emby.syemby.com
+DOMAIN-SUFFIX,cmecloud.cn,DIRECT
+DOMAIN-SUFFIX,139.com,DIRECT
