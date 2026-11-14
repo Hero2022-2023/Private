@@ -1,1 +1,1 @@
-# No VLESS nodes passed this round's delay test.
+vless://1e938e70-de83-4ab3-94dd-7413e5341366@45.129.242.187:443?encryption=none&security=reality&sni=www.apple.com&fp=safari&pbk=v5nETViDgQBMLUaX3SDx785goXpunHLMVTVQ-p-fTEk&sid=8a8fb1485bee7c6b&type=tcp&flow=xtls-rprx-vision#%E5%BE%B7%E5%9B%BD%E4%B8%93%E7%BA%BF%20YouTube%20Netflix%20Disney%20%E7%AD%89
